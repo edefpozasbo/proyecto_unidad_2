@@ -1,7 +1,7 @@
 const fs =require("fs");
 const sgMail = require('@sendgrid/mail');
 
-sgMail.setApiKey("INSERT API ID");
+sgMail.setApiKey("INGRESA API KEY");
 
 module.exports.load_template=function(path){
 	return new Promise((resolve,reject)=>{

@@ -13,6 +13,8 @@
 			.tc{text-align: center}
 			.cf2f2f2{color: #f2f2f2}
 			.c808080{color: #808080}
+			.bf1f1f1{background-color: #f1f1f1}
+			.bffffff{background-color: #ffffff}
 			.m10{margin: 10%}
 			.p5{padding: 5%}
 			.box5{box-shadow: 0 0 20px rgba(0,0,0,0.38)}
@@ -25,12 +27,12 @@
 			.box_{box-shadow: 0 0 2px rgba(0,0,0,0.38);padding: 3%;width: 40%;margin: 1%;border-radius: 10px}
 			.box_:hover{box-shadow: 0 0 10px #f58221;}
 			.br10{border-radius: 10px;}
-			td:hover{font-weight: bold;cursor: pointer;}
+			li:hover{font-weight: bold;cursor: pointer;}
 
 		</style>
 	</head>
-	<body>
-		<div class="m10 box5 br10">
+	<body class="bf1f1f1">
+		<div class="m10 box5 br10 bffffff">
 			<img src="http://www.tepic.tecnm.mx/images/header_new.jpg" alt="Imagen fondo tec" class="w10">
 			<div class="w80 ma tc p5">
 				<h1 class="c808080">¡Hola, {{nombre}} haz sido seleccionado para ir a la conferencia!</h1>
@@ -39,10 +41,17 @@
 					<div class="in vt box_">
 						<h3 class="c808080">Datos personales</h3>
 						<div class="tc">
-							<table border="0">
+							<ul>
+								<li><strong>No. control</strong> {{no_control}}</li>
+								<li><strong>Nombre completo</strong> {{nombre}}</li>
+								<li><strong>Carrera</strong> {{carrera}}</li>
+								<li><strong>Semestre</strong> {{semestre}}</li>
+								<li><strong>Email</strong> {{email}}</li>
+							</ul>
+							<!-- <table border="0">
 								<tr >
 									<td><strong>No. control</strong></td>
-									<td width="20px">	</td>
+									<td width="1%">	</td>
 									<td>{{no_control}}</td>
 								</tr>
 								<tr>
@@ -65,20 +74,27 @@
 									<td>	</td>
 									<td>{{email}}</td>
 								</tr>
-							</table>
+							</table> -->
 						</div>
 					</div>
 					<div class="in vt box_">
 						<h3 class="c808080">Escanea el QR para obtener tu pase</h3>
-						<img src='https://chart.googleapis.com/chart?cht=qr&chl={{id}}&chs=180x180&choe=UTF-8&chld=L|2' rel='nofollow' alt='qr code'><a href='http://www.qrcode-generator.de' border='0' style='cursor:default'  rel='nofollow'></a>
+						<img class="w80" src='https://chart.googleapis.com/chart?cht=qr&chl={{id}}&chs=180x180&choe=UTF-8&chld=L|2' rel='nofollow' alt='qr code'><a href='http://www.qrcode-generator.de' border='0' style='cursor:default'  rel='nofollow'></a>
 					</div>
 				</div>
 				<hr class="cf2f2f2">
 				<div class="tc">
 					<h3 class="c808080 ml3">Programa</h3>
 					<div class="w40 in vt">
-						<div class="tc">
-							<table border="0">
+						<div class="tl">
+							<ul>
+								<li><strong>Introducción</strong> 7:30 AM</li>
+								<li><strong>Tópicos básicos</strong>  8:00 AM</li>
+								<li><strong>Tópicos avanzados</strong>  9:00 AM</li>
+								<li><strong>Coffee break</strong>  10:00 AM</li>
+								<li><strong>Charla</strong> 12:00 AM</li>
+							</ul>
+							<!-- <table border="0">
 								<tr >
 									<td>Introducción</td>
 									<td width="20px"></td>
@@ -104,38 +120,18 @@
 									<td></td>
 									<td>12:00 PM</td>
 								</tr>
-							</table>
+							</table> -->
 						</div>
 					</div>
 					<div class="w40 in vt">
-						<div class="tc">
-							<table border="0">
-								<tr>
-									<td>Conferencia</td>
-									<td width="20px"></td>
-									<td>1:00 PM</td>
-								</tr>
-								<tr>
-									<td>Taller 1</td>
-									<td></td>
-									<td>3:00 PM</td>
-								</tr>
-								<tr>
-									<td>Coffee break</td>
-									<td></td>
-									<td>5:00 PM</td>
-								</tr>
-								<tr>
-									<td>Taller 2</td>
-									<td></td>
-									<td>6:00 PM</td>
-								</tr>
-								<tr>
-									<td>Clausura</td>
-									<td></td>
-									<td>7:00 PM</td>
-								</tr>
-							</table>
+						<div class="tl">
+							<ul>
+								<li><strong>Conferencia</strong>1:00 PM</li>
+								<li><strong>Taller 1</strong>3:00 PM</li>
+								<li><strong>Coffee break</strong>5:00 PM</li>
+								<li><strong>Taller 2</strong>6:00 PM</li>
+								<li><strong>Clausura</strong>7:00 PM</li>
+							</ul>
 						</div>
 					</div>
 					
